@@ -28,7 +28,8 @@ public class CannonBehavior : MonoBehaviour {
 		if (shotTimer > reloadTime) {
 			Quaternion projectileDirection = barrel.transform.rotation;
 			Vector3 origin = barrel.transform.position + projectileDirection * nozzleLocation;
-			GameObject bullet = (GameObject) Instantiate(projectile,origin,projectileDirection);
+			//GameObject bullet = (GameObject) Instantiate(projectile,origin,projectileDirection);
+			GameObject bullet = Network.Instantiate(projectile,origin,projectileDirection,0) as GameObject;
 			bullet.rigidbody.velocity = projectileDirection * Vector3.forward * projectileSpeed;
 			shotTimer = 0;
 				}
