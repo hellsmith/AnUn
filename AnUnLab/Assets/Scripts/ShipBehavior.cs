@@ -20,6 +20,8 @@ public class ShipBehavior : MonoBehaviour {
 				destinationActive = true;
 		}
 
+
+
 	// Update is called once per frame
 	void Update () {
 		if(destinationActive) {
