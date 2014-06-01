@@ -16,14 +16,33 @@ public class ShipBehavior : MonoBehaviour {
 	public float maxShift = 0.3f;
 
 	public void setTargetDestination(Vector3 pos){
-				targetDestination = pos;
-				destinationActive = true;
+		networkView.RPC("TellTargetDestination",RPCMode.All, pos);
 		}
 
+	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	{
+
+		if (stream.isWriting)
+		{
+			stream.Serialize(ref targetDestination);
+			stream.Serialize(ref destinationActive);
+		}
+		else
+		{
+			stream.Serialize(ref targetDestination);
+			stream.Serialize(ref destinationActive);
+		}
+	}
 
 
 	// Update is called once per frame
 	void Update () {
+
+	}
+
+
+	// LateUpdate is called once per frame
+	void LateUpdate () {
 		if(destinationActive) {
 			Vector3 toTarget = targetDestination - transform.position;
 			float distance = toTarget.magnitude;
@@ -68,5 +87,13 @@ public class ShipBehavior : MonoBehaviour {
 				destinationActive = false;
 			}
 		}
+	}
+
+	[RPC]
+	void TellTargetDestination (Vector3 targetdestination)
+	{
+		targetDestination = targetdestination;
+		destinationActive = true;
+		Debug.Log ("Setzte neuen Kurs");
 	}
 }
