@@ -5,6 +5,14 @@ public class CannonBehavior : MonoBehaviour {
 
 	public Vector3 barrelPosition = new Vector3(0,1,2);
 	public GameObject barrel;
+	public GameObject projectile;
+	public GameObject nozzleFire;
+
+	public Vector3 nozzleLocation;
+	public float reloadTime = 0.8f;
+	public float projectileSpeed = 5f;
+	private float shotTimer = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -15,9 +23,20 @@ public class CannonBehavior : MonoBehaviour {
 	public Vector3 targetDestination = new Vector3(100,100,100);
 
 	public Vector3 angularRotationSpeed = new Vector3(10,10,1);
+
+	private void fireShot(){
+		if (shotTimer > reloadTime) {
+			Quaternion projectileDirection = barrel.transform.rotation;
+			Vector3 origin = barrel.transform.position + projectileDirection * nozzleLocation;
+			GameObject bullet = (GameObject) Instantiate(projectile,origin,projectileDirection);
+			bullet.rigidbody.velocity = projectileDirection * Vector3.forward * projectileSpeed;
+			shotTimer = 0;
+				}
+		}
 	
 	// Update is called once per frame
 	void Update () {
+		shotTimer += Time.deltaTime;
 		if(targetingOn) {
 			Vector3 toTarget = targetDestination - transform.position;
 			float distance = toTarget.magnitude;
@@ -58,5 +77,8 @@ public class CannonBehavior : MonoBehaviour {
 
 			}
 		}
+
+		if (Input.GetKey (KeyCode.Space))
+						fireShot ();
 	}
 }

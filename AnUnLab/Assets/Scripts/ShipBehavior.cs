@@ -48,11 +48,10 @@ public class ShipBehavior : MonoBehaviour {
 				float tiltScalar = projectedTilt.x * localUp.x + projectedTilt.y * localUp.y + projectedTilt.z * localUp.z;
 
 				if(Mathf.Abs(yawScalar) > 0.01){
-					print ("dest active" + new Vector3(0,angularRotationSpeed.y * Mathf.Sign(yawScalar),0));
-					rigidbody.AddTorque(new Vector3(0,angularRotationSpeed.y * Mathf.Sign(yawScalar),0));
+					rigidbody.AddRelativeTorque(new Vector3(0,angularRotationSpeed.y * Mathf.Sign(yawScalar),0));
 				}
 				if(Mathf.Abs(tiltScalar) > 0.01){
-					rigidbody.AddTorque(new Vector3(angularRotationSpeed.x * (-Mathf.Sign(tiltScalar)),0,0));
+					rigidbody.AddRelativeTorque(new Vector3(angularRotationSpeed.x * (-Mathf.Sign(tiltScalar)),0,0));
 				}
 			}
 

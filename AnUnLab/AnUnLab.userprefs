@@ -1,13 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameControll.cs">
     <Files>
-      <File FileName="Assets\RoomSlotBehavior.cs" Line="12" Column="24" />
-      <File FileName="Assets\Scripts\CameraBehavior.cs" Line="14" Column="4" />
-      <File FileName="Assets\Scripts\GameControll.cs" Line="17" Column="10" />
-      <File FileName="Assets\Scripts\MovementTargetBehavior.cs" Line="36" Column="61" />
-      <File FileName="Assets\Scripts\CannonBehavior.cs" Line="49" Column="5" />
-      <File FileName="Assets\Scripts\ShipBehavior.cs" Line="55" Column="60" />
+      <File FileName="Assets\Scripts\GameControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShipBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\RoomSlotBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovementTargetBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\BulletBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CannonBehavior.cs" Line="29" Column="63" />
+      <File FileName="Assets\ForceFieldBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
