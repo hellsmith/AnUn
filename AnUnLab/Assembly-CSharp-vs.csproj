@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\BulletBehavior.cs" />
      <Compile Include="Assets\ForceFieldBehavior.cs" />
+     <Compile Include="Assets\InteriorNodeBehavior.cs" />
      <Compile Include="Assets\RoomSlotBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\CannonBehavior.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\ShipBehavior.cs" />
      <Compile Include="Assets\Scripts\ShipConstruction.cs" />
      <Compile Include="Assets\Scripts\ShipPartBehavior.cs" />
+     <Compile Include="Assets\WeaponSlotBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
