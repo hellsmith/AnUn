@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameControll : MonoBehaviour {
 
@@ -56,6 +57,7 @@ public class GameControll : MonoBehaviour {
 	public GameObject 	playerShip;
 	static GameControll reference;
 	private GameObject selectedShip = null;
+	public List<GameObject> ShipList;
 	
 	//----------------------------------------------------------------------------------------------------------
 	//-- Variables End
@@ -84,6 +86,7 @@ public class GameControll : MonoBehaviour {
 	//-- Start function
 	//----------------------------------------------------------------------------------------------------------
 	void Start () {
+		ShipList = new List<GameObject>();
 		reference = this;
 	//	selectedShip = (GameObject) GameObject.Instantiate (playerShip);
 
@@ -431,7 +434,16 @@ public class GameControll : MonoBehaviour {
 		}
 		
 	}
-	
+
+	//----------------------------------------------------------------------------------------------------------
+	// OnConnectedToServer
+	//----------------------------------------------------------------------------------------------------------
+	void OnConnectedToServer()
+	{
+		selectedShip = Network.Instantiate(playerShip,new Vector3(0f,0f,0f),Quaternion.identity,0) as GameObject;
+		selectedShip.GetComponent<ShipBean> ().ShipName = playerName;
+	}
+
 	//----------------------------------------------------------------------------------------------------------
 	// Used to tell the MultiplayerScript in connected players the serverName. Otherwise
 	// players connecting wouldn't be able to see the name of the server.
@@ -442,10 +454,7 @@ public class GameControll : MonoBehaviour {
 		serverName = servername;
 	}
 
-	void OnConnectedToServer()
-	{
-		selectedShip = Network.Instantiate(playerShip,new Vector3(0f,0f,0f),Quaternion.identity,0) as GameObject;
-	}
+
 
 	
 

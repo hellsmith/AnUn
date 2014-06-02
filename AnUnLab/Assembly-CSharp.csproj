@@ -54,9 +54,11 @@
      <Compile Include="Assets\Scripts\CannonBehavior.cs" />
      <Compile Include="Assets\Scripts\GameControll.cs" />
      <Compile Include="Assets\Scripts\MovementTargetBehavior.cs" />
+     <Compile Include="Assets\Scripts\ShipBean.cs" />
      <Compile Include="Assets\Scripts\ShipBehavior.cs" />
      <Compile Include="Assets\Scripts\ShipConstruction.cs" />
      <Compile Include="Assets\Scripts\ShipPartBehavior.cs" />
+     <Compile Include="Assets\Scripts\TargetList.cs" />
      <Compile Include="Assets\WeaponSlotBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
