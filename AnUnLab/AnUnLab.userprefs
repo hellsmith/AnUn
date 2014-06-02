@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShipBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BulletBehavior.cs">
     <Files>
-      <File FileName="Assets\Scripts\ShipBehavior.cs" Line="19" Column="54" />
-      <File FileName="Assets\Scripts\GameControll.cs" Line="376" Column="52" />
+      <File FileName="Assets\Scripts\ShipBehavior.cs" Line="46" Column="5" />
+      <File FileName="Assets\Scripts\BulletBehavior.cs" Line="14" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
