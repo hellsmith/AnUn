@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
-public class InventoryItem {
+[Serializable]
+public class InventoryItem{
 	RoomSlotBehavior.RoomFunction function = RoomSlotBehavior.RoomFunction.None;
 	string name;
+
+	public Bonus [] bonusList;
 
 	public RoomSlotBehavior.RoomFunction Function {
 				get {

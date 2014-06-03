@@ -10,14 +10,19 @@ public class EditorControllerBehavior : MonoBehaviour {
 
 	private List<Material> materialBackup = new List<Material>();
 
-
+	public List<Material> roomMaterials = new List<Material>();
 
 	public Material transparentMaterial;
 
 	private Vector2 classSelectionPos = Vector2.zero;
 
+	private static EditorControllerBehavior reference;
+
+	public static EditorControllerBehavior getRef() { return reference; }
+
 	// Use this for initialization
 	void Start () {
+		reference = this; 
 	}
 	
 	// Update is called once per frame

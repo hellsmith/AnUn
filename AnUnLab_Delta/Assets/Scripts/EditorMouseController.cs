@@ -11,8 +11,6 @@ public class EditorMouseController : MonoBehaviour {
 	
 	}
 
-	public List<Material> roomMaterials = new List<Material>();
-
 	private Rect windowRect = new Rect (0, 0, 200, 240);
 	private Vector2 scrollWindowPos = Vector2.zero;
 
@@ -42,31 +40,6 @@ public class EditorMouseController : MonoBehaviour {
 				}
 	}
 
-	private Material chooseMaterial(RoomSlotBehavior.RoomFunction function){
-		switch (function){
-		case RoomSlotBehavior.RoomFunction.Cargo:
-			return roomMaterials[0];
-		case RoomSlotBehavior.RoomFunction.Control:
-			return roomMaterials[1];
-		case RoomSlotBehavior.RoomFunction.LifeSupport:
-			return roomMaterials[2];
-		case RoomSlotBehavior.RoomFunction.Machine:
-			return roomMaterials[3];
-		case RoomSlotBehavior.RoomFunction.MedicalBay:
-			return roomMaterials[4];
-		case RoomSlotBehavior.RoomFunction.Sensor:
-			return roomMaterials[5];
-		case RoomSlotBehavior.RoomFunction.Shield:
-			return roomMaterials[6];
-		case RoomSlotBehavior.RoomFunction.Teleporter:
-			return roomMaterials[7];
-		case RoomSlotBehavior.RoomFunction.WeaponControll:
-			return roomMaterials[8];
-		default:
-			return null;
-		}
-		}
-
 	void PaintRoomSelection(int windowID){
 		List<InventoryItem> selectableList = new List<InventoryItem> ();
 		if (selectedRoom.fixedFunction != RoomSlotBehavior.RoomFunction.None) {
@@ -87,7 +60,6 @@ public class EditorMouseController : MonoBehaviour {
 		for(int i = 0; i < selectableList.Count; i++){
 			if(GUI.Button(new Rect(5,i * 34 + 5, windowRect.width - 30, 30), selectableList[i].Name)){
 				selectedRoom.AddItem(Inventory.getRef().itemList[i]);
-				selectedRoom.renderer.material = chooseMaterial(Inventory.getRef().itemList[i].Function);
 			}
 		}
 		GUI.EndScrollView();
