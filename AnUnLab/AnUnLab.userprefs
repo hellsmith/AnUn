@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\AnUnLab_Delta\Assets\Scripts\RoomSlotBehavior.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PositionSyncScript.cs">
     <Files>
-      <File FileName="..\AnUnLab_Delta\Assets\Scripts\InventoryItem.cs" Line="2" Column="14" />
-      <File FileName="..\AnUnLab_Delta\Assets\Scripts\InteriorNodeBehavior.cs" Line="49" Column="36" />
-      <File FileName="..\AnUnLab_Delta\Assets\Scripts\RoomSlotBehavior.cs" Line="16" Column="20" />
-      <File FileName="..\AnUnLab_Delta\Assets\Scripts\EditorMouseController.cs" Line="62" Column="58" />
-      <File FileName="..\AnUnLab_Delta\Assets\Scripts\EditorControllerBehavior.cs" Line="21" Column="69" />
+      <File FileName="Assets\Scripts\ShipBehavior.cs" Line="22" Column="2" />
+      <File FileName="Assets\Scripts\PositionSyncScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
