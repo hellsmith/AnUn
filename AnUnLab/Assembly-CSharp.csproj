@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\CannonBehavior.cs" />
      <Compile Include="Assets\Scripts\GameControll.cs" />
      <Compile Include="Assets\Scripts\MovementTargetBehavior.cs" />
+     <Compile Include="Assets\Scripts\NetworkBehaviour.cs" />
      <Compile Include="Assets\Scripts\PositionSyncScript.cs" />
      <Compile Include="Assets\Scripts\ShipBean.cs" />
      <Compile Include="Assets\Scripts\ShipBehavior.cs" />
